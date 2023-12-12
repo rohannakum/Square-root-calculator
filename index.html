@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Root Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        main {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .mainDiv {
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 20px 20px;
+        }
+
+        label {
+            font-size: 25px;
+            margin: 0px 15px;
+        }
+
+        input {
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            border-bottom: 4px solid black;
+            font-size: 25px;
+            margin: 15px;
+        }
+
+        button {
+            font-size: 30px;
+            color: white;
+            background: rgba(49, 49, 148, 0.650);
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: 50px;
+            margin: 30px;
+        }
+
+        button:hover {
+            background: rgba(49, 49, 148, 0.750);
+        }
+
+        p {
+            font-size: 25px;
+            margin: 20px 10px;
+        }
+
+        .pictureDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90vw;
+            height: auto;
+        }
+
+        .htmlPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+
+        .jsPictureDiv {
+            margin: 20px;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="mainDiv">
+            <h1>Square Root Calculator</h1>
+
+
+            <div class="input1">
+                <label for="variable1">Enter a number :</label>
+                <input type="number" name="var1" id="variable1" placeholder="Enter Number">
+            </div>
+
+            <Button onclick="sqrtFunctioin()">Calculate</Button>
+
+            <div id="beforeText">
+                <p id="p1"></p>
+            </div>
+
+
+
+        </div>
+
+        <div class="pictureDiv">
+            <div class="htmlPictureDiv">
+                <img src="./html.png" alt="P1">
+            </div>
+            <div class="jsPictureDiv">
+                <img src="./js.png" alt="P1">
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- JavaScript  -->
+    <script>
+        "use strict";
+        function sqrtFunctioin() {
+
+            let a = parseFloat(document.getElementById("variable1").value);
+            let b = Math.sqrt(a);
+
+            document.getElementById("p1").innerHTML = `The square root of ${a} is ${b}`;
+
+
+        }
+    </script>
+
+</body>
+
+</html>
